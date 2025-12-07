@@ -4,6 +4,9 @@
 
 **First Edition — December 2025**
 
+**Created by:** SEMCL.ONE Community
+**License:** [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
+
 ---
 
 ## About This Book
@@ -182,7 +185,39 @@ Share your experiences, patterns, and adaptations to help the community learn to
 
 ## License
 
-Copyright © 2025. All rights reserved.
+This work is licensed under a **Creative Commons Attribution-ShareAlike 4.0 International License** (CC BY-SA 4.0).
+
+**What this means:**
+- **Share** — Copy and redistribute in any medium or format
+- **Adapt** — Remix, transform, and build upon the material
+- **Attribution** — Credit must be given to SEMCL.ONE Community
+- **ShareAlike** — Derivatives must use the same license
+
+See [LICENSE](LICENSE) for full terms.
+
+### Attribution
+
+**Verified Intent Development (VID) Methodology**
+Created by the **SEMCL.ONE Community**
+https://github.com/SemClone/Verified-Intent-Development
+
+Licensed under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
+
+### How to Cite
+
+**In documentation:**
+```
+"Verified Intent Development (VID) Methodology" by SEMCL.ONE Community
+Licensed under CC BY-SA 4.0
+https://github.com/SemClone/Verified-Intent-Development
+```
+
+**Academic citation:**
+```
+SEMCL.ONE Community. (2025). Verified Intent Development (VID):
+A Methodology for the Age of AI-Augmented Software Development.
+Retrieved from https://github.com/SemClone/Verified-Intent-Development
+```
 
 ---
 
