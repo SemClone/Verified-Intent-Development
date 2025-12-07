@@ -1,0 +1,236 @@
+#!/bin/bash
+
+# VID Book Build Script
+# Converts VID methodology chapters to PDF and EPUB formats
+# Supports Leanpub manuscript structure
+
+set -e  # Exit on error
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# Configuration
+OUTPUT_DIR="build"
+MANUSCRIPT_DIR="manuscript"
+BOOK_TITLE="Verified Intent Development"
+BOOK_SUBTITLE="A Methodology for the Age of AI-Augmented Software Development"
+AUTHOR="SEMCL.ONE Community"
+VERSION="First Edition - December 2025"
+
+# Chapter order (matching README structure)
+CHAPTERS=(
+    "chapters/00-preface.md"
+    "chapters/01-the-inversion.md"
+    "chapters/02-why-existing-approaches-fall-short.md"
+    "chapters/03-the-core-insight.md"
+    "chapters/04-principle-one-intent-before-generation.md"
+    "chapters/05-principle-two-graduated-trust.md"
+    "chapters/06-principle-three-understanding-over-acceptance.md"
+    "chapters/07-principle-four-provenance-awareness.md"
+    "chapters/08-principle-five-continuous-calibration.md"
+    "chapters/09-the-intent-specification-practice.md"
+    "chapters/10-the-verification-ritual-practice.md"
+    "chapters/11-the-learning-loop-practice.md"
+    "chapters/12-the-provenance-hygiene-practice.md"
+    "chapters/13-for-junior-engineers.md"
+    "chapters/14-for-senior-engineers.md"
+    "chapters/15-for-teams-and-organizations.md"
+    "chapters/16-adopting-vid.md"
+    "chapters/17-the-continuing-evolution.md"
+    "chapters/18-summary.md"
+    "chapters/19-patterns-and-anti-patterns.md"
+    "chapters/20-the-verification-toolkit.md"
+    "chapters/21-test-verification-framework.md"
+    "chapters/appendix-a-quick-reference.md"
+    "chapters/appendix-b-discussion-questions.md"
+    "chapters/appendix-c-glossary.md"
+    "chapters/appendix-d-risk-scoring-rubric.md"
+    "chapters/appendix-e-decision-trees.md"
+    "chapters/appendix-f-checklists.md"
+)
+
+echo -e "${GREEN}VID Book Build Script${NC}"
+echo "=================================="
+
+# Check dependencies
+check_dependency() {
+    if ! command -v $1 &> /dev/null; then
+        echo -e "${RED}Error: $1 is not installed${NC}"
+        echo "Install with: $2"
+        return 1
+    fi
+    return 0
+}
+
+echo -e "\n${YELLOW}Checking dependencies...${NC}"
+DEPS_OK=true
+if ! check_dependency "pandoc" "sudo apt-get install pandoc (Debian/Ubuntu) or brew install pandoc (macOS)"; then
+    DEPS_OK=false
+fi
+
+if [ "$DEPS_OK" = false ]; then
+    echo -e "\n${RED}Missing dependencies. Please install them and try again.${NC}"
+    exit 1
+fi
+
+echo -e "${GREEN}All dependencies found${NC}"
+
+# Create output directories
+echo -e "\n${YELLOW}Creating output directories...${NC}"
+mkdir -p "$OUTPUT_DIR"
+mkdir -p "$MANUSCRIPT_DIR"
+
+# Build combined markdown file
+echo -e "\n${YELLOW}Combining chapters...${NC}"
+COMBINED_FILE="$OUTPUT_DIR/VID-Complete.md"
+
+# Create title page
+cat > "$COMBINED_FILE" << EOF
+---
+title: "$BOOK_TITLE"
+subtitle: "$BOOK_SUBTITLE"
+author: "$AUTHOR"
+date: "$VERSION"
+license: "CC BY-SA 4.0"
+---
+
+EOF
+
+# Combine all chapters
+for chapter in "${CHAPTERS[@]}"; do
+    if [ -f "$chapter" ]; then
+        echo "  Adding: $chapter"
+        cat "$chapter" >> "$COMBINED_FILE"
+        echo -e "\n\n---\n\n" >> "$COMBINED_FILE"
+    else
+        echo -e "${YELLOW}  Warning: $chapter not found, skipping${NC}"
+    fi
+done
+
+echo -e "${GREEN}Combined markdown created: $COMBINED_FILE${NC}"
+
+# Build PDF
+echo -e "\n${YELLOW}Building PDF...${NC}"
+pandoc "$COMBINED_FILE" \
+    --from=markdown+smart \
+    --to=pdf \
+    --output="$OUTPUT_DIR/VID-Methodology.pdf" \
+    --pdf-engine=xelatex \
+    --toc \
+    --toc-depth=2 \
+    --number-sections \
+    --highlight-style=tango \
+    --variable papersize=letter \
+    --variable geometry:margin=1in \
+    --variable fontsize=11pt \
+    --variable linkcolor=blue \
+    --variable urlcolor=blue \
+    2>&1 | grep -v "Missing character" || true
+
+if [ -f "$OUTPUT_DIR/VID-Methodology.pdf" ]; then
+    echo -e "${GREEN}PDF created: $OUTPUT_DIR/VID-Methodology.pdf${NC}"
+else
+    echo -e "${YELLOW}PDF creation failed or was skipped${NC}"
+fi
+
+# Build EPUB
+echo -e "\n${YELLOW}Building EPUB...${NC}"
+pandoc "$COMBINED_FILE" \
+    --from=markdown+smart \
+    --to=epub3 \
+    --output="$OUTPUT_DIR/VID-Methodology.epub" \
+    --toc \
+    --toc-depth=2 \
+    --epub-metadata=<(cat << EOF
+<dc:title>$BOOK_TITLE</dc:title>
+<dc:creator>$AUTHOR</dc:creator>
+<dc:publisher>SEMCL.ONE Community</dc:publisher>
+<dc:date>2025</dc:date>
+<dc:rights>Licensed under CC BY-SA 4.0</dc:rights>
+<dc:language>en-US</dc:language>
+EOF
+) \
+    --epub-cover-image=cover.png 2>/dev/null || \
+    pandoc "$COMBINED_FILE" \
+        --from=markdown+smart \
+        --to=epub3 \
+        --output="$OUTPUT_DIR/VID-Methodology.epub" \
+        --toc \
+        --toc-depth=2
+
+if [ -f "$OUTPUT_DIR/VID-Methodology.epub" ]; then
+    echo -e "${GREEN}EPUB created: $OUTPUT_DIR/VID-Methodology.epub${NC}"
+else
+    echo -e "${YELLOW}EPUB creation failed${NC}"
+fi
+
+# Create Leanpub manuscript structure
+echo -e "\n${YELLOW}Creating Leanpub manuscript structure...${NC}"
+
+# Copy chapters to manuscript directory
+for chapter in "${CHAPTERS[@]}"; do
+    if [ -f "$chapter" ]; then
+        cp "$chapter" "$MANUSCRIPT_DIR/"
+    fi
+done
+
+# Create Book.txt for Leanpub
+cat > "$MANUSCRIPT_DIR/Book.txt" << EOF
+00-preface.md
+01-the-inversion.md
+02-why-existing-approaches-fall-short.md
+03-the-core-insight.md
+04-principle-one-intent-before-generation.md
+05-principle-two-graduated-trust.md
+06-principle-three-understanding-over-acceptance.md
+07-principle-four-provenance-awareness.md
+08-principle-five-continuous-calibration.md
+09-the-intent-specification-practice.md
+10-the-verification-ritual-practice.md
+11-the-learning-loop-practice.md
+12-the-provenance-hygiene-practice.md
+13-for-junior-engineers.md
+14-for-senior-engineers.md
+15-for-teams-and-organizations.md
+16-adopting-vid.md
+17-the-continuing-evolution.md
+18-summary.md
+19-patterns-and-anti-patterns.md
+20-the-verification-toolkit.md
+21-test-verification-framework.md
+appendix-a-quick-reference.md
+appendix-b-discussion-questions.md
+appendix-c-glossary.md
+appendix-d-risk-scoring-rubric.md
+appendix-e-decision-trees.md
+appendix-f-checklists.md
+EOF
+
+echo -e "${GREEN}Leanpub manuscript created in $MANUSCRIPT_DIR/${NC}"
+
+# Summary
+echo -e "\n${GREEN}=================================="
+echo "Build Complete!"
+echo "==================================${NC}"
+echo ""
+echo "Generated files:"
+if [ -f "$OUTPUT_DIR/VID-Methodology.pdf" ]; then
+    echo -e "  ${GREEN}PDF:${NC} $OUTPUT_DIR/VID-Methodology.pdf"
+fi
+if [ -f "$OUTPUT_DIR/VID-Methodology.epub" ]; then
+    echo -e "  ${GREEN}EPUB:${NC} $OUTPUT_DIR/VID-Methodology.epub"
+fi
+echo -e "  ${GREEN}Combined Markdown:${NC} $OUTPUT_DIR/VID-Complete.md"
+echo -e "  ${GREEN}Leanpub Manuscript:${NC} $MANUSCRIPT_DIR/"
+echo ""
+echo "Usage:"
+echo "  - Share PDF/EPUB with readers"
+echo "  - Upload manuscript/ directory to Leanpub"
+echo "  - Use VID-Complete.md for other conversions"
+echo ""
+echo -e "${YELLOW}Note:${NC} For best PDF results, ensure you have:"
+echo "  - xelatex installed (part of TeX Live)"
+echo "  - Optional: cover.png in root directory"
