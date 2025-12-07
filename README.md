@@ -71,34 +71,49 @@ The VID Methodology is organized as individual chapters for optimal accessibilit
 - [Appendix B: Discussion Questions](chapters/appendix-b-discussion-questions.md)
 - [Appendix C: Glossary](chapters/appendix-c-glossary.md)
 - [Appendix D: Risk Scoring Rubric](chapters/appendix-d-risk-scoring-rubric.md) *Actionable risk assessment*
+- [Appendix E: Decision Trees](chapters/appendix-e-decision-trees.md) *Procedural guidance for common scenarios*
+- [Appendix F: VID Checklists](chapters/appendix-f-checklists.md) *Daily verification checklists and templates*
+
+#### Quick-Start Documents
+- [VID One-Page Overview](VID-One-Page-Overview.md) *Executive summary - share with colleagues*
+- [VID for Engineering Managers](VID-For-Engineering-Managers.md) *Business case, adoption roadmap, and ROI analysis*
 
 ---
 
 ## Quick Start
 
-### For Junior Engineers
-Start with:
-1. [Chapter 1: The Inversion](chapters/01-the-inversion.md) - Understand the paradigm shift
-2. [Chapter 4: Intent Before Generation](chapters/04-principle-one-intent-before-generation.md) - Learn the most important principle
-3. [Chapter 13: The Junior Engineer's Path](chapters/13-for-junior-engineers.md) - Follow the 12-week curriculum
+### First Time Here?
+**Start with the one-page overview:**
+- [VID One-Page Overview](VID-One-Page-Overview.md) - 5-minute read covering the problem, solution, and getting started
 
-### For Senior Engineers
-Start with:
-1. [Chapter 1: The Inversion](chapters/01-the-inversion.md) - Understand the paradigm shift
+### For Engineering Managers
+**Building the business case:**
+- [VID for Engineering Managers](VID-For-Engineering-Managers.md) - ROI analysis, adoption roadmap, and metrics
+
+### For Individual Contributors
+
+**Junior Engineers:**
+1. [VID One-Page Overview](VID-One-Page-Overview.md) - Start here
+2. [Chapter 1: The Inversion](chapters/01-the-inversion.md) - Understand the paradigm shift
+3. [Chapter 4: Intent Before Generation](chapters/04-principle-one-intent-before-generation.md) - Learn the most important principle
+4. [Chapter 13: The Junior Engineer's Path](chapters/13-for-junior-engineers.md) - Follow the 12-week curriculum
+
+**Senior Engineers:**
+1. [VID One-Page Overview](VID-One-Page-Overview.md) - Start here
 2. [Chapter 5: Graduated Trust](chapters/05-principle-two-graduated-trust.md) - Learn to calibrate verification
-3. [Chapter 14: For Senior Engineers](chapters/14-for-senior-engineers.md) - Apply your experience effectively
+3. [Appendix D: Risk Scoring Rubric](chapters/appendix-d-risk-scoring-rubric.md) - Actionable risk assessment
+4. [Chapter 14: For Senior Engineers](chapters/14-for-senior-engineers.md) - Apply your experience effectively
 
-### For Teams
-Start with:
-1. [Chapter 2: Why Existing Approaches Fall Short](chapters/02-why-existing-approaches-fall-short.md) - Understand what's changing
+**Teams:**
+1. [VID for Engineering Managers](VID-For-Engineering-Managers.md) - Build team buy-in
 2. [Chapter 15: For Teams and Organizations](chapters/15-for-teams-and-organizations.md) - Build a verification culture
 3. [Chapter 16: Adopting VID](chapters/16-adopting-vid.md) - Practical adoption guide
+4. [Appendix E: Decision Trees](chapters/appendix-e-decision-trees.md) - Common scenario guidance
 
-### For Hands-On Learning
-Start with:
+**Hands-On Learners:**
 1. [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md) - See VID in practice
 2. [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md) - Learn concrete techniques
-3. [Appendix A: Quick Reference](chapters/appendix-a-quick-reference.md) - Keep this handy
+3. [Appendix F: VID Checklists](chapters/appendix-f-checklists.md) - Daily verification checklists
 
 ---
 
@@ -143,8 +158,11 @@ This book is designed to be accessible to AI coding assistants through its modul
 
 ```
 VID/
-├── README.md                        # This index and navigation file
-└── chapters/                        # Modular chapter structure
+├── README.md                                 # This index and navigation file
+├── LICENSE                                   # CC BY-SA 4.0 license
+├── VID-One-Page-Overview.md                  # Executive summary (share this!)
+├── VID-For-Engineering-Managers.md           # Business case and adoption guide
+└── chapters/                                 # Modular chapter structure
     ├── 00-preface.md
     ├── 01-the-inversion.md
     ├── 02-why-existing-approaches-fall-short.md
@@ -170,7 +188,9 @@ VID/
     ├── appendix-a-quick-reference.md
     ├── appendix-b-discussion-questions.md
     ├── appendix-c-glossary.md
-    └── appendix-d-risk-scoring-rubric.md         # Actionable risk assessment
+    ├── appendix-d-risk-scoring-rubric.md         # Actionable risk assessment
+    ├── appendix-e-decision-trees.md              # Procedural guidance
+    └── appendix-f-checklists.md                  # Daily checklists & templates
 ```
 
 ---
