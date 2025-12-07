@@ -177,52 +177,6 @@ This book is designed to be accessible to AI coding assistants through its modul
 
 ---
 
-## Structure
-
-```
-VID/
-├── README.md                                 # This index and navigation file
-├── LICENSE                                   # CC BY-SA 4.0 license
-├── CONTRIBUTING.md                           # How to contribute to VID
-├── ROADMAP.md                                # Evolution and versioning
-├── VID-One-Page-Overview.md                  # Executive summary (share this!)
-├── VID-For-Engineering-Managers.md           # Business case and adoption guide
-├── VID-Diagrams.md                           # Visual diagrams of core concepts
-├── VID-Real-World-Examples.md                # Five concrete scenarios
-├── VID-Templates.md                          # Ready-to-use templates
-└── chapters/                                 # Modular chapter structure
-    ├── 00-preface.md
-    ├── 01-the-inversion.md
-    ├── 02-why-existing-approaches-fall-short.md
-    ├── 03-the-core-insight.md
-    ├── 04-principle-one-intent-before-generation.md
-    ├── 05-principle-two-graduated-trust.md
-    ├── 06-principle-three-understanding-over-acceptance.md
-    ├── 07-principle-four-provenance-awareness.md
-    ├── 08-principle-five-continuous-calibration.md
-    ├── 09-the-intent-specification-practice.md
-    ├── 10-the-verification-ritual-practice.md
-    ├── 11-the-learning-loop-practice.md
-    ├── 12-the-provenance-hygiene-practice.md
-    ├── 13-for-junior-engineers.md                # Expanded 12-week curriculum
-    ├── 14-for-senior-engineers.md
-    ├── 15-for-teams-and-organizations.md
-    ├── 16-adopting-vid.md
-    ├── 17-the-continuing-evolution.md
-    ├── 18-summary.md
-    ├── 19-patterns-and-anti-patterns.md          # Real-world scenarios
-    ├── 20-the-verification-toolkit.md            # Verification techniques
-    ├── 21-test-verification-framework.md         # Meta-verification strategies
-    ├── appendix-a-quick-reference.md
-    ├── appendix-b-discussion-questions.md
-    ├── appendix-c-glossary.md
-    ├── appendix-d-risk-scoring-rubric.md         # Actionable risk assessment
-    ├── appendix-e-decision-trees.md              # Procedural guidance
-    └── appendix-f-checklists.md                  # Daily checklists & templates
-```
-
----
-
 ## Contributing
 
 This is a living methodology. As AI capabilities evolve and teams gain experience with VID, the practices will evolve.
