@@ -16,13 +16,16 @@ VID addresses this new reality by building the judgment, practices, and habits t
 
 ---
 
-## Reading Options
+## Reading the Book
 
-### 📖 Complete Book
-- **[VID_Methodology_Book.md](VID_Methodology_Book.md)** - The complete book in a single file (3,013 lines)
+The VID Methodology is organized as individual chapters for optimal accessibility:
 
-### 📚 Individual Chapters
-Read chapters individually to focus on specific topics or to fit within context windows:
+**AI-friendly** — Each chapter fits in context windows
+**Modular** — Read what you need, when you need it
+**Maintainable** — Updates don't invalidate entire context
+**Flexible** — Combine chapters as needed for your learning path
+
+### Chapters
 
 #### Preface
 - [Preface](chapters/00-preface.md)
@@ -46,7 +49,7 @@ Read chapters individually to focus on specific topics or to fit within context 
 - [Chapter 12: The Provenance Hygiene Practice](chapters/12-the-provenance-hygiene-practice.md)
 
 #### Part IV: Building VID Skills
-- [Chapter 13: The Junior Engineer's Path to Verification Mastery](chapters/13-for-junior-engineers.md) ⭐ *Expanded 12-week curriculum*
+- [Chapter 13: The Junior Engineer's Path to Verification Mastery](chapters/13-for-junior-engineers.md) *Expanded 12-week curriculum*
 - [Chapter 14: For Senior Engineers](chapters/14-for-senior-engineers.md)
 - [Chapter 15: For Teams and Organizations](chapters/15-for-teams-and-organizations.md)
 
@@ -56,13 +59,15 @@ Read chapters individually to focus on specific topics or to fit within context 
 - [Chapter 18: Summary](chapters/18-summary.md)
 
 #### Advanced Topics
-- [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md) 🔍 *Real-world scenarios*
-- [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md) 🛠️ *Comprehensive techniques*
+- [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md) *Real-world scenarios*
+- [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md) *Comprehensive techniques*
+- [Chapter 21: Test Verification Framework](chapters/21-test-verification-framework.md) *Meta-verification strategies*
 
 #### Appendices
 - [Appendix A: Quick Reference](chapters/appendix-a-quick-reference.md)
 - [Appendix B: Discussion Questions](chapters/appendix-b-discussion-questions.md)
 - [Appendix C: Glossary](chapters/appendix-c-glossary.md)
+- [Appendix D: Risk Scoring Rubric](chapters/appendix-d-risk-scoring-rubric.md) *Actionable risk assessment*
 
 ---
 
@@ -115,14 +120,19 @@ Start with:
 
 ## For AI Assistants
 
-This book is designed to be accessible to AI coding assistants:
+This book is designed to be accessible to AI coding assistants through its modular structure:
 
-- **Full context**: Use [VID_Methodology_Book.md](VID_Methodology_Book.md) when you have sufficient context window
-- **Targeted guidance**: Reference individual chapters for specific situations:
-  - When generating code → [Chapter 4: Intent Before Generation](chapters/04-principle-one-intent-before-generation.md)
-  - When assessing risk → [Chapter 5: Graduated Trust](chapters/05-principle-two-graduated-trust.md)
-  - When reviewing code → [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md)
-  - When learning from failures → [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md)
+**Context-Aware Loading**
+- Load individual chapters as needed to fit within context windows
+- Combine 2-3 related chapters when broader context is needed
+- Start with core chapters and add specific topics as required
+
+**Targeted Guidance by Situation**
+- **Generating code** → [Chapter 4: Intent Before Generation](chapters/04-principle-one-intent-before-generation.md)
+- **Assessing risk** → [Chapter 5: Graduated Trust](chapters/05-principle-two-graduated-trust.md) + [Appendix D: Risk Scoring Rubric](chapters/appendix-d-risk-scoring-rubric.md)
+- **Reviewing code** → [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md)
+- **Verifying tests** → [Chapter 21: Test Verification Framework](chapters/21-test-verification-framework.md)
+- **Learning from failures** → [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md)
 
 ---
 
@@ -130,9 +140,8 @@ This book is designed to be accessible to AI coding assistants:
 
 ```
 VID/
-├── README.md                        # This index file
-├── VID_Methodology_Book.md          # Complete book (single file)
-└── chapters/                        # Individual chapters
+├── README.md                        # This index and navigation file
+└── chapters/                        # Modular chapter structure
     ├── 00-preface.md
     ├── 01-the-inversion.md
     ├── 02-why-existing-approaches-fall-short.md
@@ -146,17 +155,19 @@ VID/
     ├── 10-the-verification-ritual-practice.md
     ├── 11-the-learning-loop-practice.md
     ├── 12-the-provenance-hygiene-practice.md
-    ├── 13-for-junior-engineers.md           # ⭐ Expanded curriculum
+    ├── 13-for-junior-engineers.md                # Expanded 12-week curriculum
     ├── 14-for-senior-engineers.md
     ├── 15-for-teams-and-organizations.md
     ├── 16-adopting-vid.md
     ├── 17-the-continuing-evolution.md
     ├── 18-summary.md
-    ├── 19-patterns-and-anti-patterns.md     # 🔍 Real scenarios
-    ├── 20-the-verification-toolkit.md       # 🛠️ Techniques
+    ├── 19-patterns-and-anti-patterns.md          # Real-world scenarios
+    ├── 20-the-verification-toolkit.md            # Verification techniques
+    ├── 21-test-verification-framework.md         # Meta-verification strategies
     ├── appendix-a-quick-reference.md
     ├── appendix-b-discussion-questions.md
-    └── appendix-c-glossary.md
+    ├── appendix-c-glossary.md
+    └── appendix-d-risk-scoring-rubric.md         # Actionable risk assessment
 ```
 
 ---

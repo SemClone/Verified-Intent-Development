@@ -74,6 +74,42 @@ This inversion creates a dangerous period. Teams can generate code faster than e
 
 This isn't an argument against AI-assisted development. The productivity gains are real and substantial. This is an argument for **methodology that fits the new reality**.
 
+### What VID Is (and Isn't)
+
+Before explaining what VID offers, it's important to understand what it is—and what it is not.
+
+**VID is NOT:**
+
+**A replacement for Agile, Scrum, or other methodologies** — VID is complementary. You can practice VID within Agile sprints, Scrum ceremonies, or any development process. VID addresses a specific gap: how to handle AI-generated code safely.
+
+**An AI-first development framework** — VID isn't about maximizing AI usage or treating AI as the primary developer. It's about verification regardless of code source. (That said, AI-generated code often needs more verification.)
+
+**A prompt engineering guide** — VID doesn't teach you how to write better prompts or get more from AI. It teaches you what to do *after* AI generates code. Prompt engineering is orthogonal to VID.
+
+**A productivity framework** — VID's goal isn't shipping faster; it's shipping *safely* while using AI. Sometimes VID makes you slower (verification takes time). That's acceptable—the alternative is shipping bugs.
+
+**Test-Driven Development (TDD)** — While VID encourages test-first thinking, TDD focuses on using tests to drive design. VID focuses on verification across multiple dimensions: functional correctness, security, maintainability, and provenance—not just passing tests.
+
+**A development environment or tool** — VID is methodology, not software. You don't install VID. You practice it. (Though tools can help—see Appendix D for integration examples.)
+
+**VID IS:**
+
+**A verification-first methodology for AI-augmented development** — When code generation is cheap, verification becomes the core skill. VID systematizes verification.
+
+**A framework for calibrating trust** — Not all code deserves equal scrutiny. VID provides principles for matching verification depth to risk level.
+
+**A mental model for the inverted bottleneck** — VID helps developers think clearly about what changed, why it matters, and how to adapt.
+
+**Complementary to existing processes** — VID fits into your current workflow. It answers the question "How should we handle AI-generated code?" that other methodologies don't address.
+
+**Applicable regardless of AI usage** — Even if you write all code by hand, VID's principles (intent specification, graduated trust, understanding over acceptance) improve quality. But VID becomes essential when AI generates code.
+
+**The Core Distinction:**
+
+Most methodologies optimize for *code production*. VID optimizes for *code verification*. In the AI era, this is the critical shift.
+
+---
+
 ### What VID Offers
 
 Verified Intent Development is designed for this inverted world. Its core insight is simple:
