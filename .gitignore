@@ -1,6 +1,9 @@
-# Build outputs
+# Build outputs (intermediate files)
 build/
 manuscript/
+
+# Keep releases directory (final artifacts)
+!releases/
 
 # Temporary files
 *.tmp

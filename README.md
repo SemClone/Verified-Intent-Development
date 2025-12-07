@@ -19,6 +19,17 @@ VID addresses this new reality by building the judgment, practices, and habits t
 
 ---
 
+## Download the Book
+
+**Complete VID Methodology available in multiple formats:**
+
+- 📕 **[PDF Download](releases/VID-Methodology.pdf)** — Full methodology in PDF format
+- 📱 **[EPUB Download](releases/VID-Methodology.epub)** — For e-readers and mobile devices
+
+*Or read online using the chapter links below*
+
+---
+
 ## Reading the Book
 
 The VID Methodology is organized as individual chapters for optimal accessibility:
