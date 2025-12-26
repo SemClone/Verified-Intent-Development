@@ -1,0 +1,31 @@
+# Brief description of changes
+
+
+# Detailed description (optional)
+
+
+# Provenance (remove this section if not applicable)
+# Delete the lines that don't apply:
+#
+# @provenance human-original
+# @provenance ai-generated
+# @provenance ai-assisted
+# @provenance mixed
+#
+# @verification deep
+# @verification standard
+# @verification light
+# @verification unreviewed
+#
+# @tool <name-of-ai-tool>
+# @reviewer <your-email>
+
+# Usage Instructions:
+# 1. To use this template, run:
+#    git config commit.template templates/git-commit-template.txt
+#
+# 2. Now when you run `git commit`, this template will appear in your editor
+#
+# 3. Fill in the description and uncomment the relevant provenance lines
+#
+# 4. Lines starting with # will be ignored in the final commit message

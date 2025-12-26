@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# VID Provenance Git Hook - pre-commit
+# This hook checks for potential AI-generated code and reminds you to add provenance markers
+
+# Colors for output
+YELLOW='\033[1;33m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+# Get list of staged files
+staged_files=$(git diff --cached --name-only --diff-filter=ACM)
+
+# Only check code files
+code_files=$(echo "$staged_files" | grep -E '\.(ts|js|py|rb|go|java|cpp|c|rs|jsx|tsx)$' || true)
+
+if [ -z "$code_files" ]; then
+    # No code files staged, allow commit
+    exit 0
+fi
+
+# Check if any staged files lack provenance markers
+files_without_provenance=""
+
+echo "$code_files" | while read file; do
+    if [ -f "$file" ]; then
+        # Check if file has provenance marker
+        if ! grep -q "@provenance" "$file" 2>/dev/null; then
+            # Check if file has substantial code (more than 10 lines, excluding comments/blank)
+            code_lines=$(grep -v '^\s*#\|^\s*//\|^\s*$' "$file" 2>/dev/null | wc -l | xargs)
+            if [ "$code_lines" -gt 10 ]; then
+                echo "$file"
+            fi
+        fi
+    fi
+done > /tmp/vid_files_without_provenance
+
+if [ -s /tmp/vid_files_without_provenance ]; then
+    echo ""
+    echo -e "${YELLOW}⚠️  VID Provenance Check${NC}"
+    echo ""
+    echo "The following files don't have provenance markers:"
+    echo ""
+    cat /tmp/vid_files_without_provenance | while read file; do
+        echo "  - $file"
+    done
+    echo ""
+    echo "Consider adding provenance documentation to indicate:"
+    echo "  - Was this AI-generated, AI-assisted, or human-written?"
+    echo "  - What verification was performed?"
+    echo ""
+    echo "Use VS Code snippet 'vid-ai', 'vid-assist', or 'vid-human'"
+    echo "Or see templates/provenance-markers.code-snippets"
+    echo ""
+    echo -e "${GREEN}Proceeding with commit...${NC}"
+    echo "(This is a reminder, not blocking)"
+    echo ""
+fi
+
+rm -f /tmp/vid_files_without_provenance
+
+# Always allow commit (this is just a reminder)
+exit 0

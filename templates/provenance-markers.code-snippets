@@ -1,0 +1,54 @@
+{
+  "VID Provenance - AI Generated": {
+    "prefix": "vid-ai",
+    "description": "Mark code as AI-generated with VID provenance metadata",
+    "body": [
+      "// @provenance ai-generated",
+      "// @tool ${1:tool-name}",
+      "// @verification ${2|deep,standard,light,unreviewed|}",
+      "// @reviewer ${3:your-email}",
+      "// Human intent: ${4:what you were trying to accomplish}",
+      "// Known limitations: ${5:edge cases or scenarios not handled}",
+      "$0"
+    ]
+  },
+  "VID Provenance - AI Assisted": {
+    "prefix": "vid-assist",
+    "description": "Mark code as AI-assisted (human-written with AI help)",
+    "body": [
+      "// @provenance ai-assisted",
+      "// @tool ${1:tool-name}",
+      "// Human intent: ${2:what you were trying to accomplish}",
+      "$0"
+    ]
+  },
+  "VID Provenance - Human Original": {
+    "prefix": "vid-human",
+    "description": "Mark code as human-original",
+    "body": [
+      "// @provenance human-original",
+      "$0"
+    ]
+  },
+  "VID Provenance - Mixed": {
+    "prefix": "vid-mixed",
+    "description": "Mark code as mixed (combination of human and AI)",
+    "body": [
+      "// @provenance mixed",
+      "// @tool ${1:tool-name}",
+      "// @verification ${2|deep,standard,light|}",
+      "// AI-generated parts: ${3:describe which parts}",
+      "// Human-written parts: ${4:describe which parts}",
+      "$0"
+    ]
+  },
+  "VID Verification Note": {
+    "prefix": "vid-verify",
+    "description": "Add verification notes to existing code",
+    "body": [
+      "// Verification note: ${1:what was verified and how}",
+      "// Edge cases tested: ${2:list edge cases}",
+      "$0"
+    ]
+  }
+}
