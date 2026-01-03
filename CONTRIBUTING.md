@@ -380,10 +380,19 @@ Every bug caught, every lesson shared, every practice improved—it all helps th
 
 ---
 
-## Attribution
+## Attribution and Recognition
 
 **Verified Intent Development (VID) Methodology**
 Created by SEMCL.ONE Community
 Licensed under CC BY-SA 4.0
 
 https://github.com/SemClone/Verified-Intent-Development
+
+### Adding Your Name
+
+When you contribute to VID, please add your name to [AUTHORS.md](AUTHORS.md):
+
+- **Core Contributors**: Major contributions (new chapters, frameworks, sustained work)
+- **Contributors**: All other valuable contributions (fixes, examples, improvements)
+
+This helps us properly recognize everyone who has improved VID. See AUTHORS.md for details on how to add your name.
