@@ -17,7 +17,7 @@ OUTPUT_DIR="build"
 MANUSCRIPT_DIR="manuscript"
 BOOK_TITLE="Verified Intent Development"
 BOOK_SUBTITLE="A Methodology for the Age of AI-Augmented Software Development"
-AUTHOR="SEMCL.ONE Community"
+AUTHOR="Oscar Valenzuela"
 VERSION="First Edition - December 2025"
 
 # Chapter order (matching README structure)

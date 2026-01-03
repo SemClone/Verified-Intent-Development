@@ -2,15 +2,24 @@
 
 This document lists the people who have contributed to Verified Intent Development (VID).
 
-## Project Maintainers
+## Creator and Primary Author
 
-**SEMCL.ONE Community**
-- Primary maintainer and publisher of the VID methodology
-- Contact: [Add contact information]
+**Oscar Valenzuela**
+- Creator and primary author of the VID methodology
+- Project maintainer
+- SEMCL.ONE Community
 
 ## Core Contributors
 
 Contributors who have made significant contributions to the methodology, documentation, or tooling.
+
+**Daniel Aguayo**
+- Collaborator and feedback provider
+- Contributed to methodology development
+
+**Diego Jorquera**
+- Collaborator and feedback provider
+- Contributed to methodology development
 
 <!-- Add your name below in alphabetical order by last name -->
 <!-- Format: **Full Name** - Brief description of contribution -->
@@ -59,9 +68,9 @@ By contributing, you agree that your contributions will be licensed under the sa
 When citing VID or using substantial portions in your work, please use:
 
 ```
-SEMCL.ONE Community and Contributors (2025). Verified Intent Development:
+Valenzuela, O. (2025). Verified Intent Development:
 A Methodology for the Age of AI-Augmented Software Development.
-Available at: https://github.com/SemClone/Verified-Intent-Development
+SEMCL.ONE Community. Available at: https://github.com/SemClone/Verified-Intent-Development
 ```
 
 ## Questions?

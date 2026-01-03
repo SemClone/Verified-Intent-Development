@@ -383,7 +383,7 @@ Every bug caught, every lesson shared, every practice improved—it all helps th
 ## Attribution and Recognition
 
 **Verified Intent Development (VID) Methodology**
-Created by SEMCL.ONE Community
+Created by Oscar Valenzuela (SEMCL.ONE Community)
 Licensed under CC BY-SA 4.0
 
 https://github.com/SemClone/Verified-Intent-Development
