@@ -4,7 +4,7 @@
 
 **First Edition — December 2025**
 
-**Created by:** SEMCL.ONE Community
+**Author:** Oscar Valenzuela (SEMCL.ONE Community)
 
 **License:** [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
 
@@ -194,7 +194,7 @@ This work is licensed under a **Creative Commons Attribution-ShareAlike 4.0 Inte
 **What this means:**
 - **Share** — Copy and redistribute in any medium or format
 - **Adapt** — Remix, transform, and build upon the material
-- **Attribution** — Credit must be given to SEMCL.ONE Community
+- **Attribution** — Credit must be given to Oscar Valenzuela
 - **ShareAlike** — Derivatives must use the same license
 
 See [LICENSE](LICENSE) for full terms.
