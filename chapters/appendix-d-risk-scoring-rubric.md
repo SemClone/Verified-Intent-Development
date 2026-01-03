@@ -446,7 +446,7 @@ Print this for your desk:
 │ 21-30: Guarded Trust   (30-60 min)              │
 │ 31-47: Minimal Trust   (1-3 hr + review)        │
 │                                                 │
-│ ESCALATE if I/R/E ≥ 4 OR Compliance ≥ 6        │
+│ ESCALATE if I/R/E >= 4 OR Compliance >= 6      │
 │ WHEN UNSURE: Round up, ask team, verify more   │
 └─────────────────────────────────────────────────┘
 ```
