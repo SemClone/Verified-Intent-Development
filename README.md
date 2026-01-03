@@ -92,7 +92,7 @@ The VID Methodology is organized as individual chapters for optimal accessibilit
 
 #### Practical Resources
 - [VID Visual Diagrams](VID-Diagrams.md) *Visual representations of core concepts*
-- [VID Real-World Examples](VID-Real-World-Examples.md) *Five concrete scenarios showing VID in action*
+- [VID Real-World Examples](chapters/22-real-world-examples.md) *Five concrete scenarios showing VID in action*
 - [VID Templates](VID-Templates.md) *Ready-to-use templates for immediate adoption*
 - [Provenance Tracking Tools](templates/) *Git hooks, scripts, and snippets for automated provenance tracking*
 
@@ -134,7 +134,7 @@ The VID Methodology is organized as individual chapters for optimal accessibilit
 
 **Hands-On Learners:**
 1. [VID Visual Diagrams](VID-Diagrams.md) - Visual understanding of core concepts
-2. [VID Real-World Examples](VID-Real-World-Examples.md) - Five concrete scenarios
+2. [VID Real-World Examples](chapters/22-real-world-examples.md) - Five concrete scenarios
 3. [VID Templates](VID-Templates.md) - Start using VID today
 4. [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md) - See VID in practice
 5. [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md) - Learn concrete techniques

@@ -90,7 +90,7 @@ Before explaining what VID offers, it's important to understand what it is—and
 
 **Test-Driven Development (TDD)** — While VID encourages test-first thinking, TDD focuses on using tests to drive design. VID focuses on verification across multiple dimensions: functional correctness, security, maintainability, and provenance—not just passing tests.
 
-**A development environment or tool** — VID is methodology, not software. You don't install VID. You practice it. (Though tools can help—see Appendix D for integration examples.)
+**A development environment or tool** — VID is methodology, not software. You don't install VID. You practice it. (Though tools can help—see Appendix F and the `/templates` directory for integration examples.)
 
 **VID IS:**
 
@@ -131,4 +131,3 @@ VID provides:
 The rest of this book teaches all five.
 
 ---
-
