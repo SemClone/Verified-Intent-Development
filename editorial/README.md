@@ -1,6 +1,6 @@
-# Technical Documentation
+# Editorial Documentation
 
-This directory contains technical documentation for building, publishing, and deploying the VID book.
+This directory contains editorial documentation for building, publishing, and deploying the VID book.
 
 ## Quick Links
 
