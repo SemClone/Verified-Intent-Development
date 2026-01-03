@@ -280,14 +280,37 @@ for chapter in "${CHAPTERS[@]}"; do
     fi
 done
 
-# Copy top-level README for Docsify landing page
+# Copy top-level files for Docsify website
 if [ -f "README.md" ]; then
     cp README.md "$DOCS_DIR/README.md"
+fi
+if [ -f "VID-One-Page-Overview.md" ]; then
+    cp VID-One-Page-Overview.md "$DOCS_DIR/"
+fi
+if [ -f "VID-For-Engineering-Managers.md" ]; then
+    cp VID-For-Engineering-Managers.md "$DOCS_DIR/"
+fi
+if [ -f "LICENSE" ]; then
+    cp LICENSE "$DOCS_DIR/"
+fi
+if [ -f "CONTRIBUTING.md" ]; then
+    cp CONTRIBUTING.md "$DOCS_DIR/"
+fi
+if [ -f "ROADMAP.md" ]; then
+    cp ROADMAP.md "$DOCS_DIR/"
+fi
+if [ -f "AUTHORS.md" ]; then
+    cp AUTHORS.md "$DOCS_DIR/"
 fi
 
 # Copy resources to docs directory
 if [ -d "resources" ]; then
     cp resources/*.md "$DOCS_DIR/resources/" 2>/dev/null || true
+fi
+
+# Copy templates directory for GitHub Pages
+if [ -d "templates" ]; then
+    cp -r templates "$DOCS_DIR/"
 fi
 
 # Copy releases to docs directory for GitHub Pages
