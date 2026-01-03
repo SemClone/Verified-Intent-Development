@@ -50,8 +50,8 @@
 ---
 
 * **Download**
-  * [PDF Version](../build/VID-Methodology.pdf)
-  * [EPUB Version](../build/VID-Methodology.epub)
+  * [PDF Version](releases/VID-Methodology.pdf)
+  * [EPUB Version](releases/VID-Methodology.epub)
 
 * **Links**
   * [GitHub Repository](https://github.com/SemClone/Verified-Intent-Development)
