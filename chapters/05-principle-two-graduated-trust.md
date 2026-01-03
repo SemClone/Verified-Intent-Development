@@ -42,6 +42,29 @@ VID defines a spectrum of trust levels:
 
 **Minimal Trust (intensive verification):** AI used only for suggestions. Human writes or extensively rewrites all code. Multiple reviewers. Appropriate for high-risk code.
 
+### Scoring Before Trusting
+
+Before selecting a trust level, score the work using the VID risk formula (detailed rubric in Appendix D):
+
+```
+Risk Score = (Impact × 3) + (Reversibility × 2) + (Exposure × 2) + Compliance
+```
+
+| Dimension      | Scale | Max Contribution |
+|----------------|-------|------------------|
+| Impact         | 1-5   | 15               |
+| Reversibility  | 1-5   | 10               |
+| Exposure       | 1-5   | 10               |
+| Compliance     | 0-10  | 10               |
+
+Trust levels map to total scores:
+- **0-10:** High Trust
+- **11-20:** Moderate Trust
+- **21-30:** Guarded Trust
+- **31-47:** Minimal Trust
+
+Escalate to the next level if Impact, Reversibility, or Exposure scores 4 or higher, OR if Compliance is 6+ (regulated domains). The quick calculation keeps risk discussions objective in the moment while Appendix D provides the deeper rubric.
+
 ### Calibrating Trust
 
 For any code generation, ask:
@@ -80,4 +103,3 @@ Teams often fall into treating all code the same:
 VID's graduated approach focuses human attention where it matters. It's not about less verification overall — it's about appropriate verification everywhere.
 
 ---
-

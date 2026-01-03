@@ -4,7 +4,7 @@
 
 For fifty years, software development methodologies have solved the same fundamental problem: **code is expensive to produce**.
 
-Writing code requires understanding the problem, designing a solution, translating that design into syntax, debugging errors, and iterating until it works. This process is slow, cognitively demanding, and error-prone. A skilled developer might produce 100-200 lines of production-quality code per day.
+Writing code requires understanding the problem, designing a solution, translating that design into syntax, debugging errors, and iterating until it works. This process is slow, cognitively demanding, and error-prone. Seasoned developers historically measure meaningful progress in small, high-quality increments rather than raw line counts.
 
 Every methodology you've heard of optimizes around this constraint:
 
@@ -128,7 +128,7 @@ Verified Intent Development is designed for this inverted world. Its core insigh
 
 VID doesn't slow down generation. It builds systematic verification into the development process so that speed doesn't come at the cost of quality, security, or maintainability.
 
-The developer's role transforms. Instead of spending 80% of time writing code and 20% reviewing, VID practitioners spend 20% specifying intent and 80% verifying output. This isn't a step backward — it's a recognition of where human judgment adds value.
+The developer's role transforms. Instead of spending the bulk of time writing code and a fraction reviewing, VID practitioners flip that ratio: specify intent deliberately, then invest most of the effort in verification. This isn't a step backward — it's a recognition of where human judgment adds value.
 
 VID provides:
 

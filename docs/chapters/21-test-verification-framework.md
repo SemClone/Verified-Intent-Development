@@ -12,6 +12,8 @@ This isn't academic. AI-generated tests can:
 
 This chapter provides a framework for verifying tests themselves—whether AI-generated or human-written.
 
+> **Where this fits:** Chapter 21 lives in the Advanced Topics section (not the appendices) because meta-verification becomes essential once the core VID practices are in place. Treat it as a continuation of Chapter 20's toolkit rather than optional reference material.
+
 ---
 
 ## Core Principle: Tests Are Code

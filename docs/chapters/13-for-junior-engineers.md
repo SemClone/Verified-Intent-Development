@@ -280,6 +280,8 @@ You've built the foundations: you can read code critically, specify intent clear
 
 **The Goal:** Learn to verify that code does what it's supposed to do.
 
+> **Cross-reference:** This week introduces the functional verification techniques detailed in Chapter 20 (input partitioning, boundary analysis, category testing). Reference those sections when you need more depth.
+
 **The Problem You're Solving:** "It works" is not verification. Code that works for one input might fail for others. Functional verification systematically checks that code meets its specification across its intended domain.
 
 **Daily Practice (45-60 minutes):**
@@ -361,6 +363,8 @@ The most dangerous mistake is trusting test passage as proof of correctness. Tes
 
 **The Goal:** Learn to verify that code does what was *intended*, not just what was *specified*.
 
+> **Cross-reference:** This week builds on the semantic verification techniques in Chapter 20 (intent alignment, implicit expectations, context checking). Use those techniques as you practice.
+
 **The Problem You're Solving:** Specifications are imperfect. They describe what we think we want, but we often have implicit expectations we didn't specify. Semantic verification bridges the gap between specification and true intent.
 
 **Daily Practice (45-60 minutes):**
@@ -437,6 +441,8 @@ Perhaps the subtlest mistake is assuming your implicit expectations are shared b
 ### Week 6: Security Verification
 
 **The Goal:** Learn to identify security implications in code.
+
+> **Cross-reference:** Pair this week with the security techniques in Chapter 20 (sections on adversarial testing and provenance hygiene) so you're practicing the same toolkit the rest of the organization uses.
 
 **The Problem You're Solving:** AI generates code that works. It rarely generates code that's secure against adversarial input. Security thinking requires considering how code could be misused, not just how it's intended to be used.
 
@@ -540,6 +546,8 @@ The most revealing mistake is the phrase "No one would do that." You see a poten
 ### Week 7: Maintainability Verification
 
 **The Goal:** Learn to evaluate whether code can be understood and modified in the future.
+
+> **Cross-reference:** This week applies the maintainability verification techniques from Chapter 20 (naming review, complexity assessment, documentation quality). Practice with those specific checklists.
 
 **The Problem You're Solving:** Code is read more than it's written. AI generates code that works but is often hard to understand or modify. Maintainability verification ensures code won't become a burden.
 
@@ -1001,4 +1009,3 @@ The path presented in this curriculum is harder. It requires deliberate practice
 The engineers who thrive in this new era won't be those who generate the most code. They'll be those who can confidently verify that code is correct, secure, and maintainable—and who can teach others to do the same. That's the path this curriculum offers. The work is yours to do.
 
 ---
-
