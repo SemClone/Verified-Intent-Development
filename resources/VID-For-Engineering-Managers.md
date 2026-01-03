@@ -742,7 +742,7 @@ VID provides the answer: **Systematic verification calibrated to risk.**
 ## Attribution
 
 **Verified Intent Development (VID) Methodology**
-Created by SEMCL.ONE Community
+Created by Oscar Valenzuela (SEMCL.ONE Community) - See [AUTHORS.md](./AUTHORS.md) for all contributors
 Licensed under CC BY-SA 4.0
 
 https://github.com/SemClone/Verified-Intent-Development
