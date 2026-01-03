@@ -80,11 +80,24 @@ fi
 
 echo -e "${GREEN}All dependencies found${NC}"
 
-# Create output directories
-echo -e "\n${YELLOW}Creating output directories...${NC}"
+# Clean and create output directories
+echo -e "\n${YELLOW}Cleaning and creating output directories...${NC}"
+
+# Remove old build artifacts to ensure fresh build
+if [ -d "$OUTPUT_DIR" ]; then
+    echo "  Removing old build artifacts..."
+    rm -f "$OUTPUT_DIR"/*.pdf
+    rm -f "$OUTPUT_DIR"/*.epub
+    rm -f "$OUTPUT_DIR"/*.md
+fi
+
 mkdir -p "$OUTPUT_DIR"
 mkdir -p "$MANUSCRIPT_DIR"
 mkdir -p "$DOCS_DIR"
+
+# Generate timestamp for dated versions
+BUILD_DATE=$(date +%Y-%m-%d)
+BUILD_TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 
 # Build combined markdown file
 echo -e "\n${YELLOW}Combining chapters...${NC}"
@@ -117,10 +130,13 @@ echo -e "${GREEN}Combined markdown created: $COMBINED_FILE${NC}"
 
 # Build PDF
 echo -e "\n${YELLOW}Building PDF...${NC}"
+
+# Create dated PDF first
+PDF_DATED="$OUTPUT_DIR/VID-Methodology-$BUILD_DATE.pdf"
 pandoc "$COMBINED_FILE" \
     --from=markdown+smart \
     --to=pdf \
-    --output="$OUTPUT_DIR/VID-Methodology.pdf" \
+    --output="$PDF_DATED" \
     --pdf-engine=xelatex \
     --toc \
     --toc-depth=2 \
@@ -133,18 +149,27 @@ pandoc "$COMBINED_FILE" \
     --variable urlcolor=blue \
     2>&1 | grep -v "Missing character" || true
 
-if [ -f "$OUTPUT_DIR/VID-Methodology.pdf" ]; then
-    echo -e "${GREEN}PDF created: $OUTPUT_DIR/VID-Methodology.pdf${NC}"
+if [ -f "$PDF_DATED" ]; then
+    # Copy dated version to standard filename
+    cp "$PDF_DATED" "$OUTPUT_DIR/VID-Methodology.pdf"
+
+    PDF_SIZE=$(ls -lh "$PDF_DATED" | awk '{print $5}')
+    echo -e "${GREEN}PDF created:${NC}"
+    echo -e "  ${GREEN}Standard:${NC} $OUTPUT_DIR/VID-Methodology.pdf"
+    echo -e "  ${GREEN}Dated:${NC} $PDF_DATED ($PDF_SIZE)"
 else
     echo -e "${YELLOW}PDF creation failed or was skipped${NC}"
 fi
 
 # Build EPUB
 echo -e "\n${YELLOW}Building EPUB...${NC}"
+
+# Create dated EPUB first
+EPUB_DATED="$OUTPUT_DIR/VID-Methodology-$BUILD_DATE.epub"
 pandoc "$COMBINED_FILE" \
     --from=markdown+smart \
     --to=epub3 \
-    --output="$OUTPUT_DIR/VID-Methodology.epub" \
+    --output="$EPUB_DATED" \
     --toc \
     --toc-depth=2 \
     --epub-metadata=<(cat << EOF
@@ -160,12 +185,18 @@ EOF
     pandoc "$COMBINED_FILE" \
         --from=markdown+smart \
         --to=epub3 \
-        --output="$OUTPUT_DIR/VID-Methodology.epub" \
+        --output="$EPUB_DATED" \
         --toc \
         --toc-depth=2
 
-if [ -f "$OUTPUT_DIR/VID-Methodology.epub" ]; then
-    echo -e "${GREEN}EPUB created: $OUTPUT_DIR/VID-Methodology.epub${NC}"
+if [ -f "$EPUB_DATED" ]; then
+    # Copy dated version to standard filename
+    cp "$EPUB_DATED" "$OUTPUT_DIR/VID-Methodology.epub"
+
+    EPUB_SIZE=$(ls -lh "$EPUB_DATED" | awk '{print $5}')
+    echo -e "${GREEN}EPUB created:${NC}"
+    echo -e "  ${GREEN}Standard:${NC} $OUTPUT_DIR/VID-Methodology.epub"
+    echo -e "  ${GREEN}Dated:${NC} $EPUB_DATED ($EPUB_SIZE)"
 else
     echo -e "${YELLOW}EPUB creation failed${NC}"
 fi
@@ -271,14 +302,22 @@ echo "==================================${NC}"
 echo ""
 echo "Generated files:"
 if [ -f "$OUTPUT_DIR/VID-Methodology.pdf" ]; then
-    echo -e "  ${GREEN}PDF:${NC} $OUTPUT_DIR/VID-Methodology.pdf"
+    echo -e "  ${GREEN}PDF (standard):${NC} $OUTPUT_DIR/VID-Methodology.pdf"
+    if [ -f "$PDF_DATED" ]; then
+        echo -e "  ${GREEN}PDF (dated):${NC} $PDF_DATED"
+    fi
 fi
 if [ -f "$OUTPUT_DIR/VID-Methodology.epub" ]; then
-    echo -e "  ${GREEN}EPUB:${NC} $OUTPUT_DIR/VID-Methodology.epub"
+    echo -e "  ${GREEN}EPUB (standard):${NC} $OUTPUT_DIR/VID-Methodology.epub"
+    if [ -f "$EPUB_DATED" ]; then
+        echo -e "  ${GREEN}EPUB (dated):${NC} $EPUB_DATED"
+    fi
 fi
 echo -e "  ${GREEN}Combined Markdown:${NC} $OUTPUT_DIR/VID-Complete.md"
 echo -e "  ${GREEN}Leanpub Manuscript:${NC} $MANUSCRIPT_DIR/"
 echo -e "  ${GREEN}Website:${NC} $DOCS_DIR/"
+echo ""
+echo -e "${YELLOW}Build Date:${NC} $BUILD_DATE"
 echo ""
 echo "Usage:"
 echo "  - Share PDF/EPUB with readers"
