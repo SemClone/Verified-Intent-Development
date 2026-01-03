@@ -3,8 +3,11 @@
 > A Methodology for the Age of AI-Augmented Software Development
 
 **Author**: Oscar Valenzuela (SEMCL.ONE Community)
+
 **Contributors**: Daniel Aguayo, Diego Jorquera, and [others](https://github.com/SemClone/Verified-Intent-Development/blob/master/AUTHORS.md)
+
 **Version**: First Edition - December 2025
+
 **License**: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ---
