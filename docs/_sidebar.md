@@ -49,5 +49,5 @@
   * [EPUB Version](../build/VID-Methodology.epub)
 
 * **Links**
-  * [GitHub Repository](https://github.com/semcl-one/verified-intent-development)
+  * [GitHub Repository](https://github.com/SemClone/Verified-Intent-Development)
   * [License (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)

@@ -3,8 +3,11 @@
 > A Methodology for the Age of AI-Augmented Software Development
 
 **Author**: Oscar Valenzuela (SEMCL.ONE Community)
+
 **Contributors**: Daniel Aguayo, Diego Jorquera, and [others](https://github.com/SemClone/Verified-Intent-Development/blob/master/AUTHORS.md)
+
 **Version**: First Edition - December 2025
+
 **License**: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
 
 ---
@@ -64,7 +67,7 @@ This book is available in multiple formats:
 
 This is a community-driven methodology. We welcome your feedback, experiences, and contributions.
 
-- **GitHub**: [Report issues or contribute](https://github.com/semcl-one/verified-intent-development)
+- **GitHub**: [Report issues or contribute](https://github.com/SemClone/Verified-Intent-Development)
 - **Discussions**: Share your experiences applying VID
 - **Pull Requests**: Help improve this book
 - **Authors**: Add your name to [AUTHORS.md](https://github.com/SemClone/Verified-Intent-Development/blob/master/AUTHORS.md) when you contribute

@@ -58,7 +58,7 @@ Then open http://localhost:3000
 1. Drag `docs/` folder to https://app.netlify.com/drop
 2. Instantly live!
 
-See [WEBSITE.md](WEBSITE.md) for complete deployment guide with Vercel, Cloudflare Pages, and custom domains.
+See [WEBSITE.md](technical/WEBSITE.md) for complete deployment guide with Vercel, Cloudflare Pages, and custom domains.
 
 ### Advantages
 - ✅ **Free hosting** (GitHub Pages, Netlify, Vercel, Cloudflare)

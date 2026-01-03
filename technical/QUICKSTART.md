@@ -137,8 +137,8 @@ git push  # Website auto-updates!
 
 ## Need Help?
 
-- **Website deployment**: See [WEBSITE.md](WEBSITE.md)
-- **Complete publishing guide**: See [PUBLISHING.md](PUBLISHING.md)
+- **Website deployment**: See [WEBSITE.md](technical/WEBSITE.md)
+- **Complete publishing guide**: See [PUBLISHING.md](technical/PUBLISHING.md)
 - **Leanpub structure**: See [manuscript/README.md](manuscript/README.md)
 
 ---
