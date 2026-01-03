@@ -67,7 +67,7 @@ This book is available in multiple formats:
 
 This is a community-driven methodology. We welcome your feedback, experiences, and contributions.
 
-- **GitHub**: [Report issues or contribute](https://github.com/semcl-one/verified-intent-development)
+- **GitHub**: [Report issues or contribute](https://github.com/SemClone/Verified-Intent-Development)
 - **Discussions**: Share your experiences applying VID
 - **Pull Requests**: Help improve this book
 - **Authors**: Add your name to [AUTHORS.md](https://github.com/SemClone/Verified-Intent-Development/blob/master/AUTHORS.md) when you contribute
