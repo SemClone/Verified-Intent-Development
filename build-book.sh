@@ -44,6 +44,7 @@ CHAPTERS=(
     "chapters/19-patterns-and-anti-patterns.md"
     "chapters/20-the-verification-toolkit.md"
     "chapters/21-test-verification-framework.md"
+    "chapters/22-real-world-examples.md"
     "chapters/appendix-a-quick-reference.md"
     "chapters/appendix-b-discussion-questions.md"
     "chapters/appendix-c-glossary.md"
@@ -237,6 +238,7 @@ DOCS_DIR="docs"
 
 # Ensure docs directory structure exists
 mkdir -p "$DOCS_DIR/chapters"
+mkdir -p "$DOCS_DIR/resources"
 
 # Copy chapters to docs directory
 for chapter in "${CHAPTERS[@]}"; do
@@ -245,8 +247,14 @@ for chapter in "${CHAPTERS[@]}"; do
     fi
 done
 
+# Copy resources to docs directory
+if [ -d "resources" ]; then
+    cp resources/*.md "$DOCS_DIR/resources/" 2>/dev/null || true
+fi
+
 echo -e "${GREEN}Website files updated in $DOCS_DIR/${NC}"
-echo -e "  ${GREEN}Chapters:${NC} $DOCS_DIR/chapters/ (28 files)"
+echo -e "  ${GREEN}Chapters:${NC} $DOCS_DIR/chapters/ (29 files)"
+echo -e "  ${GREEN}Resources:${NC} $DOCS_DIR/resources/ (templates & diagrams)"
 echo -e "  ${GREEN}Website:${NC} $DOCS_DIR/index.html"
 
 # Summary

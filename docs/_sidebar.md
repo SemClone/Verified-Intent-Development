@@ -33,6 +33,11 @@
   * [Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md)
   * [The Verification Toolkit](chapters/20-the-verification-toolkit.md)
   * [Test Verification Framework](chapters/21-test-verification-framework.md)
+  * [Real-World Examples](chapters/22-real-world-examples.md)
+
+* **Resources**
+  * [Templates](resources/VID-Templates.md)
+  * [Diagrams](resources/VID-Diagrams.md)
 
 * **Appendices**
   * [Quick Reference Guide](chapters/appendix-a-quick-reference.md)
