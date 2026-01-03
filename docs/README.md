@@ -126,8 +126,6 @@ This work is licensed under a **Creative Commons Attribution-ShareAlike 4.0 Inte
 - **Attribution** — Credit must be given to Oscar Valenzuela
 - **ShareAlike** — Derivatives must use the same license
 
-See [LICENSE](LICENSE) for full terms.
-
 ### Attribution
 
 **Verified Intent Development (VID) Methodology**
