@@ -2,25 +2,30 @@
 
 ## A Methodology for the Age of AI-Augmented Software Development
 
-**First Edition — December 2025**
-
-**Author:** Oscar Valenzuela (SEMCL.ONE Community)
-
-**License:** [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/)
-
----
-
-## About This Book
-
 This book introduces Verified Intent Development (VID), a methodology designed for software development in an era where artificial intelligence can generate code faster than humans can verify it.
 
 **The core insight:** Code generation is no longer the bottleneck. Verification is.
 
 VID addresses this new reality by building the judgment, practices, and habits that allow developers to move fast *with confidence*.
 
-### AI Assistance Disclosure
+---
 
-AI language models supported portions of the editorial review, fact validation, and automated build process for this edition. Every AI-assisted contribution went through human verification, alignment with VID principles, and provenance tracking before inclusion.
+## The Five Principles
+
+1. **Intent Before Generation** - Never generate code without first articulating what you intend to build and how you will verify correctness
+2. **Graduated Trust** - The level of verification should match the level of risk
+3. **Understanding Over Acceptance** - Never accept code you don't understand at an appropriate level of depth
+4. **Provenance Awareness** - Always know where code came from and what that origin implies
+5. **Continuous Calibration** - Regularly assess whether your verification practices match actual risk and adjust accordingly
+
+---
+
+## The Core Practices
+
+1. **Intent Specification** - Articulate functional requirements, boundaries, and success criteria before generating
+2. **Verification Rituals** - Apply consistent verification practices after every generation, scaled to risk
+3. **Learning Loop** - Track outcomes and adjust practices based on what you learn
+4. **Provenance Hygiene** - Document and maintain awareness of code origins
 
 ---
 
@@ -31,10 +36,6 @@ AI language models supported portions of the editorial review, fact validation, 
 - **[PDF Download](releases/VID-Methodology.pdf)** — Full methodology in PDF format
 - **[EPUB Download](releases/VID-Methodology.epub)** — For e-readers and mobile devices
 
-*Or read online using the chapter links below*
-
----
-
 ## Reading the Book
 
 The VID Methodology is organized as individual chapters for optimal accessibility:
@@ -44,65 +45,8 @@ The VID Methodology is organized as individual chapters for optimal accessibilit
 **Maintainable** — Updates don't invalidate entire context
 **Flexible** — Combine chapters as needed for your learning path
 
-### Chapters
+*Read online using the chapter links below or the full online version [here](https://semclone.github.io/Verified-Intent-Development/#/)*
 
-#### Preface
-- [Preface](chapters/00-preface.md)
-
-#### Part I: The New Reality
-- [Chapter 1: The Inversion](chapters/01-the-inversion.md)
-- [Chapter 2: Why Existing Approaches Fall Short](chapters/02-why-existing-approaches-fall-short.md)
-- [Chapter 3: The Core Insight](chapters/03-the-core-insight.md)
-
-#### Part II: The Five Principles
-- [Chapter 4: Principle One — Intent Before Generation](chapters/04-principle-one-intent-before-generation.md)
-- [Chapter 5: Principle Two — Graduated Trust](chapters/05-principle-two-graduated-trust.md)
-- [Chapter 6: Principle Three — Understanding Over Acceptance](chapters/06-principle-three-understanding-over-acceptance.md)
-- [Chapter 7: Principle Four — Provenance Awareness](chapters/07-principle-four-provenance-awareness.md)
-- [Chapter 8: Principle Five — Continuous Calibration](chapters/08-principle-five-continuous-calibration.md)
-
-#### Part III: Core Practices
-- [Chapter 9: The Intent Specification Practice](chapters/09-the-intent-specification-practice.md)
-- [Chapter 10: The Verification Ritual Practice](chapters/10-the-verification-ritual-practice.md)
-- [Chapter 11: The Learning Loop Practice](chapters/11-the-learning-loop-practice.md)
-- [Chapter 12: The Provenance Hygiene Practice](chapters/12-the-provenance-hygiene-practice.md)
-
-#### Part IV: Building VID Skills
-- [Chapter 13: The Junior Engineer's Path to Verification Mastery](chapters/13-for-junior-engineers.md) *Expanded 12-week curriculum*
-- [Chapter 14: For Senior Engineers](chapters/14-for-senior-engineers.md)
-- [Chapter 15: For Teams and Organizations](chapters/15-for-teams-and-organizations.md)
-
-#### Part V: Moving Forward
-- [Chapter 16: Adopting VID](chapters/16-adopting-vid.md)
-- [Chapter 17: The Continuing Evolution](chapters/17-the-continuing-evolution.md)
-- [Chapter 18: Summary](chapters/18-summary.md)
-
-#### Advanced Topics
-- [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md) *Real-world scenarios*
-- [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md) *Comprehensive techniques*
-- [Chapter 21: Test Verification Framework](chapters/21-test-verification-framework.md) *Meta-verification strategies*
-
-#### Appendices
-- [Appendix A: Quick Reference](chapters/appendix-a-quick-reference.md)
-- [Appendix B: Discussion Questions](chapters/appendix-b-discussion-questions.md)
-- [Appendix C: Glossary](chapters/appendix-c-glossary.md)
-- [Appendix D: Risk Scoring Rubric](chapters/appendix-d-risk-scoring-rubric.md) *Actionable risk assessment*
-- [Appendix E: Decision Trees](chapters/appendix-e-decision-trees.md) *Procedural guidance for common scenarios*
-- [Appendix F: VID Checklists](chapters/appendix-f-checklists.md) *Daily verification checklists and templates*
-
-#### Quick-Start Documents
-- [VID One-Page Overview](VID-One-Page-Overview.md) *Executive summary - share with colleagues*
-- [VID for Engineering Managers](VID-For-Engineering-Managers.md) *Business case, adoption roadmap, and ROI analysis*
-
-#### Practical Resources
-- [VID Visual Diagrams](resources/VID-Diagrams.md) *Visual representations of core concepts*
-- [VID Real-World Examples](chapters/22-real-world-examples.md) *Five concrete scenarios showing VID in action*
-- [VID Templates](resources/VID-Templates.md) *Ready-to-use templates for immediate adoption*
-- [Provenance Tracking Tools](templates/) *Git hooks, scripts, and snippets for automated provenance tracking*
-
-#### Project Resources
-- [Contributing Guide](CONTRIBUTING.md) *How to contribute to VID*
-- [Roadmap & Versioning](ROADMAP.md) *Evolution and future plans*
 
 ---
 
@@ -142,25 +86,6 @@ The VID Methodology is organized as individual chapters for optimal accessibilit
 3. [VID Templates](resources/VID-Templates.md) - Start using VID today
 4. [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md) - See VID in practice
 5. [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md) - Learn concrete techniques
-
----
-
-## The Five Principles
-
-1. **Intent Before Generation** - Never generate code without first articulating what you intend to build and how you will verify correctness
-2. **Graduated Trust** - The level of verification should match the level of risk
-3. **Understanding Over Acceptance** - Never accept code you don't understand at an appropriate level of depth
-4. **Provenance Awareness** - Always know where code came from and what that origin implies
-5. **Continuous Calibration** - Regularly assess whether your verification practices match actual risk and adjust accordingly
-
----
-
-## The Core Practices
-
-1. **Intent Specification** - Articulate functional requirements, boundaries, and success criteria before generating
-2. **Verification Rituals** - Apply consistent verification practices after every generation, scaled to risk
-3. **Learning Loop** - Track outcomes and adjust practices based on what you learn
-4. **Provenance Hygiene** - Document and maintain awareness of code origins
 
 ---
 
@@ -207,6 +132,7 @@ See [LICENSE](LICENSE) for full terms.
 
 **Verified Intent Development (VID) Methodology**
 Created by **Oscar Valenzuela** (SEMCL.ONE Community)
+
 With contributions from [Daniel Aguayo, Diego Jorquera, and others](AUTHORS.md)
 https://github.com/SemClone/Verified-Intent-Development
 
