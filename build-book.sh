@@ -290,9 +290,19 @@ if [ -d "resources" ]; then
     cp resources/*.md "$DOCS_DIR/resources/" 2>/dev/null || true
 fi
 
+# Copy releases to docs directory for GitHub Pages
+mkdir -p "$DOCS_DIR/releases"
+if [ -f "$OUTPUT_DIR/VID-Methodology.pdf" ]; then
+    cp "$OUTPUT_DIR/VID-Methodology.pdf" "$DOCS_DIR/releases/"
+fi
+if [ -f "$OUTPUT_DIR/VID-Methodology.epub" ]; then
+    cp "$OUTPUT_DIR/VID-Methodology.epub" "$DOCS_DIR/releases/"
+fi
+
 echo -e "${GREEN}Website files updated in $DOCS_DIR/${NC}"
 echo -e "  ${GREEN}Chapters:${NC} $DOCS_DIR/chapters/"
 echo -e "  ${GREEN}Resources:${NC} $DOCS_DIR/resources/"
+echo -e "  ${GREEN}Releases:${NC} $DOCS_DIR/releases/"
 echo -e "  ${GREEN}Website README:${NC} $DOCS_DIR/README.md"
 
 # Summary
