@@ -93,6 +93,7 @@ The VID Methodology is organized as individual chapters for optimal accessibilit
 - [VID Visual Diagrams](VID-Diagrams.md) *Visual representations of core concepts*
 - [VID Real-World Examples](VID-Real-World-Examples.md) *Five concrete scenarios showing VID in action*
 - [VID Templates](VID-Templates.md) *Ready-to-use templates for immediate adoption*
+- [Provenance Tracking Tools](templates/) *Git hooks, scripts, and snippets for automated provenance tracking*
 
 #### Project Resources
 - [Contributing Guide](CONTRIBUTING.md) *How to contribute to VID*
