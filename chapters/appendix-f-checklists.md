@@ -560,6 +560,14 @@ Verification:
 
 ---
 
+## Additional Resources
+
+For more checklists, templates, and visual diagrams, see:
+- **[VID Templates](../resources/VID-Templates.md)** - Ready-to-use templates for intent specs, code reviews, and documentation
+- **[VID Diagrams](../resources/VID-Diagrams.md)** - Visual workflow diagrams and decision trees
+
+---
+
 *Print these checklists. Use them daily. Build verification habits.*
 
 *Return to [Table of Contents](../README.md)*
