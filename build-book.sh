@@ -17,7 +17,7 @@ OUTPUT_DIR="build"
 MANUSCRIPT_DIR="manuscript"
 BOOK_TITLE="Verified Intent Development"
 BOOK_SUBTITLE="A Methodology for the Age of AI-Augmented Software Development"
-AUTHOR="SEMCL.ONE Community"
+AUTHOR="Oscar Valenzuela"
 VERSION="First Edition - December 2025"
 
 # Chapter order (matching README structure)
@@ -170,6 +170,9 @@ fi
 # Create Leanpub manuscript structure
 echo -e "\n${YELLOW}Creating Leanpub manuscript structure...${NC}"
 
+# Create resources folder for images/assets
+mkdir -p "$MANUSCRIPT_DIR/resources"
+
 # Copy chapters to manuscript directory
 for chapter in "${CHAPTERS[@]}"; do
     if [ -f "$chapter" ]; then
@@ -177,7 +180,7 @@ for chapter in "${CHAPTERS[@]}"; do
     fi
 done
 
-# Create Book.txt for Leanpub
+# Create Book.txt for Leanpub (full book)
 cat > "$MANUSCRIPT_DIR/Book.txt" << EOF
 00-preface.md
 01-the-inversion.md
@@ -209,7 +212,42 @@ appendix-e-decision-trees.md
 appendix-f-checklists.md
 EOF
 
+# Create Sample.txt for Leanpub (free preview - first 4 chapters)
+cat > "$MANUSCRIPT_DIR/Sample.txt" << EOF
+00-preface.md
+01-the-inversion.md
+02-why-existing-approaches-fall-short.md
+03-the-core-insight.md
+EOF
+
+# Create Subset.txt for Leanpub (development/testing - first 2 chapters)
+cat > "$MANUSCRIPT_DIR/Subset.txt" << EOF
+00-preface.md
+01-the-inversion.md
+EOF
+
 echo -e "${GREEN}Leanpub manuscript created in $MANUSCRIPT_DIR/${NC}"
+echo -e "  ${GREEN}Book.txt:${NC} Full book structure (28 chapters)"
+echo -e "  ${GREEN}Sample.txt:${NC} Free preview (4 chapters)"
+echo -e "  ${GREEN}Subset.txt:${NC} Development preview (2 chapters)"
+
+# Create website structure (Docsify)
+echo -e "\n${YELLOW}Creating website (Docsify)...${NC}"
+DOCS_DIR="docs"
+
+# Ensure docs directory structure exists
+mkdir -p "$DOCS_DIR/chapters"
+
+# Copy chapters to docs directory
+for chapter in "${CHAPTERS[@]}"; do
+    if [ -f "$chapter" ]; then
+        cp "$chapter" "$DOCS_DIR/chapters/"
+    fi
+done
+
+echo -e "${GREEN}Website files updated in $DOCS_DIR/${NC}"
+echo -e "  ${GREEN}Chapters:${NC} $DOCS_DIR/chapters/ (28 files)"
+echo -e "  ${GREEN}Website:${NC} $DOCS_DIR/index.html"
 
 # Summary
 echo -e "\n${GREEN}=================================="
@@ -225,12 +263,41 @@ if [ -f "$OUTPUT_DIR/VID-Methodology.epub" ]; then
 fi
 echo -e "  ${GREEN}Combined Markdown:${NC} $OUTPUT_DIR/VID-Complete.md"
 echo -e "  ${GREEN}Leanpub Manuscript:${NC} $MANUSCRIPT_DIR/"
+echo -e "  ${GREEN}Website:${NC} $DOCS_DIR/"
 echo ""
 echo "Usage:"
 echo "  - Share PDF/EPUB with readers"
 echo "  - Upload manuscript/ directory to Leanpub"
+echo "  - Upload EPUB to Amazon Kindle Direct Publishing (KDP)"
+echo "  - Serve docs/ as website (see instructions below)"
 echo "  - Use VID-Complete.md for other conversions"
 echo ""
-echo -e "${YELLOW}Note:${NC} For best PDF results, ensure you have:"
-echo "  - xelatex installed (part of TeX Live)"
-echo "  - Optional: cover.png in root directory"
+echo -e "${YELLOW}Publishing Instructions:${NC}"
+echo ""
+echo "Leanpub:"
+echo "  1. Connect your Dropbox or GitHub to Leanpub"
+echo "  2. Upload the manuscript/ directory contents"
+echo "  3. Generate preview using Book.txt (full book)"
+echo "  4. Use Sample.txt for the free preview on your landing page"
+echo "  5. Use Subset.txt during development for faster previews"
+echo ""
+echo "Amazon Kindle (KDP):"
+echo "  1. Go to kdp.amazon.com"
+echo "  2. Upload build/VID-Methodology.epub as your manuscript"
+echo "  3. Amazon will convert EPUB to Kindle format automatically"
+echo "  4. Note: MOBI format is deprecated as of Feb 2025"
+echo ""
+echo "Website (Docsify - Free hosting):"
+echo "  Local preview:"
+echo "    npx serve docs"
+echo "    # Or: python3 -m http.server 3000 --directory docs"
+echo ""
+echo "  Deploy options:"
+echo "    • GitHub Pages: Push to GitHub, enable Pages on 'docs/' folder"
+echo "    • Netlify: Drag & drop 'docs/' folder to netlify.com/drop"
+echo "    • Vercel: Connect GitHub repo and deploy"
+echo "    • Cloudflare Pages: Connect repo and deploy"
+echo ""
+echo -e "${YELLOW}Optional:${NC}"
+echo "  - Add cover.png (1600x2560px recommended) in root directory"
+echo "  - Add images to manuscript/resources/ folder"

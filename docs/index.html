@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Verified Intent Development - A Methodology for AI-Augmented Software Development</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="A methodology designed for software development in an era where artificial intelligence can generate code faster than humans can verify it.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+  <!-- Theme: Simple Dark -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+
+  <style>
+    :root {
+      --base-font-size: 16px;
+      --theme-color: #2c3e50;
+      --sidebar-width: 300px;
+    }
+
+    /* Better code highlighting */
+    .markdown-section pre > code {
+      background-color: #f8f8f8;
+      border-radius: 4px;
+    }
+
+    /* Better blockquote styling */
+    .markdown-section blockquote {
+      border-left: 4px solid var(--theme-color);
+      background-color: #f8f8f8;
+      padding: 10px 20px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading...</div>
+  <script>
+    window.$docsify = {
+      name: 'Verified Intent Development',
+      repo: 'https://github.com/semcl-one/verified-intent-development',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+
+      // Search plugin
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search the book...',
+        noData: 'No results found.',
+        depth: 6
+      },
+
+      // Pagination
+      pagination: {
+        previousText: 'Previous Chapter',
+        nextText: 'Next Chapter',
+        crossChapter: true,
+        crossChapterText: true,
+      },
+
+      // Copy code button
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied'
+      },
+
+      // Footer
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function (html) {
+            return html;
+          });
+          hook.afterEach(function (html) {
+            var footer = [
+              '<hr/>',
+              '<footer>',
+              '<span>Licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a></span>',
+              ' | ',
+              '<span>© 2025 SEMCL.ONE Community</span>',
+              '</footer>'
+            ].join('');
+            return html + footer;
+          });
+        }
+      ]
+    }
+  </script>
+
+  <!-- Docsify core -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+  <!-- Search plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+
+  <!-- Copy code plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+
+  <!-- Pagination plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+
+  <!-- Syntax highlighting -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+
+  <!-- Google Analytics (optional - replace with your ID) -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/ga.min.js"></script> -->
+</body>
+</html>
