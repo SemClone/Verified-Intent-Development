@@ -64,13 +64,23 @@ Every methodology designed for the old world optimizes for the wrong constraint.
 
 This inversion creates a dangerous period. Teams can generate code faster than ever, but their verification capacity hasn't increased. The result is predictable:
 
-**Technical debt accumulates faster.** Code is generated without full understanding, creating maintenance burdens that compound.
+**Technical debt accumulates faster.** Code is generated without full understanding, creating maintenance burdens that compound. GitHub’s 2023 developer experience study found that 92% of enterprise developers already use AI coding tools, meaning high-velocity generation is now the norm for most teams.[^1]
 
-**Security vulnerabilities multiply.** AI generates code that works but doesn't anticipate adversarial conditions. Studies show AI-generated code has higher vulnerability rates than human-written code in security-sensitive contexts.
+**Security vulnerabilities multiply.** AI generates code that works but doesn't anticipate adversarial conditions. Stanford's 2023 study found that developers using AI assistants were more likely to introduce security vulnerabilities, particularly in authentication and input validation code.[^2] NYU researchers likewise observed that roughly 40% of Copilot’s security-sensitive suggestions contained exploitable weaknesses.[^3]
 
-**Quality becomes invisible.** When code appears instantly, it *feels* free. Teams skip verification because the generation was so easy. They discover the costs later, in production.
+**Quality becomes invisible.** When code appears instantly, it *feels* free. Teams skip verification because the generation was so easy. GitClear’s 2024 analysis of 153 million lines of code showed “churn” (code written and reverted) rising sharply in the AI era, signaling hidden quality problems that escape early review.[^4]
 
-**Understanding erodes.** Developers accept code they don't fully understand. When problems arise, they lack the context to debug effectively.
+**Understanding erodes.** Developers accept code they don't fully understand. When problems arise, they lack the context to debug effectively. Stack Overflow's 2024–2025 Developer Surveys report that only 43% of developers trust AI accuracy and 20% feel less confident in their own problem-solving after relying on AI tools, reflecting diminished understanding.[^5]
+
+[^1]: GitHub. "Survey reveals AI's impact on the developer experience." June 13, 2023. https://github.blog/news-insights/research/survey-reveals-ais-impact-on-the-developer-experience/
+
+[^2]: Perry, N., Srivastava, M., Kumar, D., & Boneh, D. (2023). "Do Users Write More Insecure Code with AI Assistants?" *Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications Security (CCS '23)*, pp. 2785–2799. https://doi.org/10.1145/3576915.3623157
+
+[^3]: Pearce, H., Ahmad, B., Tan, B., Dolan-Gavitt, B., & Karri, R. (2022). "Asleep at the Keyboard? Assessing the Security of GitHub Copilot's Code Contributions." *Proceedings of the 43rd IEEE Symposium on Security and Privacy (SP 2022)*, pp. 754–768. https://doi.org/10.1109/SP46214.2022.9833571
+
+[^4]: GitClear. "Coding on Copilot: 2023 Data Suggests Downward Pressure on Code Quality." January 2024. https://www.gitclear.com/coding_on_copilot_data_shows_ais_downward_pressure_on_code_quality
+
+[^5]: Stack Overflow. "2024 Developer Survey" and "2025 Developer Survey." https://survey.stackoverflow.co/2024/ and https://survey.stackoverflow.co/2025/
 
 This isn't an argument against AI-assisted development. The productivity gains are real and substantial. This is an argument for **methodology that fits the new reality**.
 

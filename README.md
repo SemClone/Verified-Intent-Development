@@ -91,9 +91,9 @@ The VID Methodology is organized as individual chapters for optimal accessibilit
 - [VID for Engineering Managers](VID-For-Engineering-Managers.md) *Business case, adoption roadmap, and ROI analysis*
 
 #### Practical Resources
-- [VID Visual Diagrams](VID-Diagrams.md) *Visual representations of core concepts*
+- [VID Visual Diagrams](resources/VID-Diagrams.md) *Visual representations of core concepts*
 - [VID Real-World Examples](chapters/22-real-world-examples.md) *Five concrete scenarios showing VID in action*
-- [VID Templates](VID-Templates.md) *Ready-to-use templates for immediate adoption*
+- [VID Templates](resources/VID-Templates.md) *Ready-to-use templates for immediate adoption*
 - [Provenance Tracking Tools](templates/) *Git hooks, scripts, and snippets for automated provenance tracking*
 
 #### Project Resources
@@ -133,9 +133,9 @@ The VID Methodology is organized as individual chapters for optimal accessibilit
 4. [Appendix E: Decision Trees](chapters/appendix-e-decision-trees.md) - Common scenario guidance
 
 **Hands-On Learners:**
-1. [VID Visual Diagrams](VID-Diagrams.md) - Visual understanding of core concepts
+1. [VID Visual Diagrams](resources/VID-Diagrams.md) - Visual understanding of core concepts
 2. [VID Real-World Examples](chapters/22-real-world-examples.md) - Five concrete scenarios
-3. [VID Templates](VID-Templates.md) - Start using VID today
+3. [VID Templates](resources/VID-Templates.md) - Start using VID today
 4. [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md) - See VID in practice
 5. [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md) - Learn concrete techniques
 
@@ -170,12 +170,12 @@ This book is designed to be accessible to AI coding assistants through its modul
 - Start with core chapters and add specific topics as required
 
 **Targeted Guidance by Situation**
-- **Generating code** → [Chapter 4: Intent Before Generation](chapters/04-principle-one-intent-before-generation.md) + [VID Templates](VID-Templates.md)
-- **Assessing risk** → [Chapter 5: Graduated Trust](chapters/05-principle-two-graduated-trust.md) + [Appendix D: Risk Scoring Rubric](chapters/appendix-d-risk-scoring-rubric.md) + [VID Templates](VID-Templates.md)
-- **Reviewing code** → [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md) + [VID Templates](VID-Templates.md)
+- **Generating code** → [Chapter 4: Intent Before Generation](chapters/04-principle-one-intent-before-generation.md) + [VID Templates](resources/VID-Templates.md)
+- **Assessing risk** → [Chapter 5: Graduated Trust](chapters/05-principle-two-graduated-trust.md) + [Appendix D: Risk Scoring Rubric](chapters/appendix-d-risk-scoring-rubric.md) + [VID Templates](resources/VID-Templates.md)
+- **Reviewing code** → [Chapter 20: The Verification Toolkit](chapters/20-the-verification-toolkit.md) + [VID Templates](resources/VID-Templates.md)
 - **Verifying tests** → [Chapter 21: Test Verification Framework](chapters/21-test-verification-framework.md)
-- **Learning from failures** → [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md) + [VID Real-World Examples](VID-Real-World-Examples.md)
-- **Understanding concepts visually** → [VID Diagrams](VID-Diagrams.md)
+- **Learning from failures** → [Chapter 19: Patterns and Anti-Patterns](chapters/19-patterns-and-anti-patterns.md) + [Chapter 22: Real-World Examples](chapters/22-real-world-examples.md)
+- **Understanding concepts visually** → [VID Diagrams](resources/VID-Diagrams.md)
 
 ---
 
