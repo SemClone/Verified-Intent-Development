@@ -4,6 +4,14 @@
 
 These decision trees guide you through common VID scenarios. Use them when you're uncertain about the right approach.
 
+### Quick Index
+
+1. **Should I Use AI for This Task?** — Decide when AI generation is appropriate.
+2. **What Trust Level Should I Apply?** — Map risk scores to verification depth.
+3. **How Do I Verify AI-Generated Tests?** — Ritual for accepting automated tests.
+4. **Should I Accept This AI-Generated Code?** — Go/no-go check before merging.
+5. **What Do I Do When Production Breaks?** — Recovery playbook when verification misses something.
+
 ---
 
 ## Decision Tree 1: Should I Use AI for This Task?

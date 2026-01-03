@@ -18,6 +18,10 @@ This book introduces Verified Intent Development (VID), a methodology designed f
 
 VID addresses this new reality by building the judgment, practices, and habits that allow developers to move fast *with confidence*.
 
+### AI Assistance Disclosure
+
+AI language models supported portions of the editorial review, fact validation, and automated build process for this edition. Every AI-assisted contribution went through human verification, alignment with VID principles, and provenance tracking before inclusion.
+
 ---
 
 ## Download the Book

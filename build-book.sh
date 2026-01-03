@@ -15,6 +15,7 @@ NC='\033[0m' # No Color
 # Configuration
 OUTPUT_DIR="build"
 MANUSCRIPT_DIR="manuscript"
+DOCS_DIR="docs"
 BOOK_TITLE="Verified Intent Development"
 BOOK_SUBTITLE="A Methodology for the Age of AI-Augmented Software Development"
 AUTHOR="Oscar Valenzuela"
@@ -83,6 +84,7 @@ echo -e "${GREEN}All dependencies found${NC}"
 echo -e "\n${YELLOW}Creating output directories...${NC}"
 mkdir -p "$OUTPUT_DIR"
 mkdir -p "$MANUSCRIPT_DIR"
+mkdir -p "$DOCS_DIR"
 
 # Build combined markdown file
 echo -e "\n${YELLOW}Combining chapters...${NC}"
@@ -234,9 +236,9 @@ echo -e "  ${GREEN}Subset.txt:${NC} Development preview (2 chapters)"
 
 # Create website structure (Docsify)
 echo -e "\n${YELLOW}Creating website (Docsify)...${NC}"
-DOCS_DIR="docs"
 
-# Ensure docs directory structure exists
+# Ensure docs directory structure exists and is fresh
+rm -rf "$DOCS_DIR/chapters"
 mkdir -p "$DOCS_DIR/chapters"
 mkdir -p "$DOCS_DIR/resources"
 
@@ -247,15 +249,20 @@ for chapter in "${CHAPTERS[@]}"; do
     fi
 done
 
+# Copy top-level README for Docsify landing page
+if [ -f "README.md" ]; then
+    cp README.md "$DOCS_DIR/README.md"
+fi
+
 # Copy resources to docs directory
 if [ -d "resources" ]; then
     cp resources/*.md "$DOCS_DIR/resources/" 2>/dev/null || true
 fi
 
 echo -e "${GREEN}Website files updated in $DOCS_DIR/${NC}"
-echo -e "  ${GREEN}Chapters:${NC} $DOCS_DIR/chapters/ (29 files)"
-echo -e "  ${GREEN}Resources:${NC} $DOCS_DIR/resources/ (templates & diagrams)"
-echo -e "  ${GREEN}Website:${NC} $DOCS_DIR/index.html"
+echo -e "  ${GREEN}Chapters:${NC} $DOCS_DIR/chapters/"
+echo -e "  ${GREEN}Resources:${NC} $DOCS_DIR/resources/"
+echo -e "  ${GREEN}Website README:${NC} $DOCS_DIR/README.md"
 
 # Summary
 echo -e "\n${GREEN}=================================="

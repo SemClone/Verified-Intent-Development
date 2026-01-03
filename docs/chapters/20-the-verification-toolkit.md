@@ -551,27 +551,32 @@ When you see a pattern repeated, trace its origin.
 
 These techniques form a toolkit, not a checklist. Selection depends on context.
 
-**For Low-Risk Code:**
+**High Trust (Low Risk):**
 - Quick functional verification (key test cases)
 - Naming audit (basic clarity)
 - Skip intensive security analysis
 
-**For Medium-Risk Code:**
+**Moderate Trust (Typical Risk):**
 - Systematic functional verification (input partitioning, boundary analysis)
 - Basic security review (input vectors, obvious injection points)
 - Maintainability review (stranger test, naming audit)
 - Provenance documentation
 
-**For High-Risk Code:**
-- Comprehensive functional verification (all techniques)
-- Intensive security review (all techniques)
-- Full maintainability assessment (all techniques)
-- Formal provenance documentation
-- Multiple reviewers
+**Guarded Trust (Important Risk):**
+    - Comprehensive functional verification (all techniques)
+    - Intensive security review (all techniques)
+    - Full maintainability assessment (all techniques)
+    - Formal provenance documentation
+    - Multiple reviewers
+
+**Minimal Trust (Intensive Verification):**
+    - Everything in Guarded Trust
+    - Dedicated security review or threat modeling session
+    - Formal provenance documentation with reviewer sign-off
+    - Incident response considerations
 
 **The skill is matching technique to need.** Over time, you develop intuition for what each situation requires. The techniques become second nature—you apply them without consciously thinking through lists.
 
 That's mastery: not following a checklist, but having internalized the toolkit so deeply that you automatically apply what's needed.
 
 ---
-

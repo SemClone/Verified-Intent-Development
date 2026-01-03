@@ -438,6 +438,8 @@ Perhaps the subtlest mistake is assuming your implicit expectations are shared b
 
 **The Goal:** Learn to identify security implications in code.
 
+> **Cross-reference:** Pair this week with the security techniques in Chapter 20 (sections on adversarial testing and provenance hygiene) so you're practicing the same toolkit the rest of the organization uses.
+
 **The Problem You're Solving:** AI generates code that works. It rarely generates code that's secure against adversarial input. Security thinking requires considering how code could be misused, not just how it's intended to be used.
 
 **Prerequisite Understanding:**
@@ -1001,4 +1003,3 @@ The path presented in this curriculum is harder. It requires deliberate practice
 The engineers who thrive in this new era won't be those who generate the most code. They'll be those who can confidently verify that code is correct, secure, and maintainable—and who can teach others to do the same. That's the path this curriculum offers. The work is yours to do.
 
 ---
-
