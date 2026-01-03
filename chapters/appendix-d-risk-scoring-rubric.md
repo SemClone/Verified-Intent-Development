@@ -85,12 +85,35 @@ Risk Score = (I × 3) + (R × 2) + (E × 2) + C
 
 ## Trust Level Mapping
 
-| Risk Score | Trust Level | Verification Depth | Time Investment |
+| Risk Score | Trust Level | Verification Ritual | Time Investment |
 |------------|-------------|-------------------|-----------------|
-| **0-10** | **High Trust** | Basic verification | 5-10 minutes |
-| **11-20** | **Moderate Trust** | Standard verification | 15-30 minutes |
-| **21-30** | **Guarded Trust** | Thorough verification | 30-60 minutes |
-| **31-47** | **Minimal Trust** | Intensive verification | 1-3 hours + peer review |
+| **0-10** | **High Trust** | High Trust Ritual | 5-10 minutes |
+| **11-20** | **Moderate Trust** | Moderate Trust Ritual | 15-30 minutes |
+| **21-30** | **Guarded Trust** | Guarded Trust Ritual | 30-60 minutes |
+| **31-47** | **Minimal Trust** | Minimal Trust Ritual | 1-3 hours + peer review |
+
+---
+
+## Master Calibration Table
+
+This table consolidates the risk scoring (from above), verification rituals (from Chapter 10), and mandatory requirements into a single reference.
+
+| Trust Level | Risk Score | Ritual Name | Mandatory Requirements | Time |
+|-------------|------------|-------------|----------------------|------|
+| **High Trust** | 0-10 | High Trust Ritual | Read code (no skimming), verify against intent, run automated tests, spot-check 1 edge case | 5-10 min |
+| **Moderate Trust** | 11-20 | Moderate Trust Ritual | All High Trust, plus: Input partitioning, check error handling, review integration points | 15-30 min |
+| **Guarded Trust** | 21-30 | Guarded Trust Ritual | All Moderate Trust, plus: STRIDE threat analysis, adversarial testing, performance check, peer review recommended | 30-60 min |
+| **Minimal Trust** | 31-47 | Minimal Trust Ritual | All Guarded Trust, plus: Mandatory 2+ peer reviewers, security specialist, mutation testing (>90%), tech lead sign-off | 1-3+ hours |
+
+### Universal Escalation Rules
+
+**Regardless of the total score, escalate to the next highest Trust Level if:**
+
+- **High Single Dimension:** Impact, Reversibility, or Exposure ≥ 4
+- **Regulatory Sensitivity:** Compliance score ≥ 6 (e.g., HIPAA, PCI-DSS, SOX)
+- **Critical Impact:** Impact = 5 defaults immediately to Minimal Trust
+
+**Rationale:** A single high-risk dimension can cause catastrophic failure, even if the total score is low.
 
 ---
 
