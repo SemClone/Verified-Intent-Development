@@ -280,6 +280,8 @@ You've built the foundations: you can read code critically, specify intent clear
 
 **The Goal:** Learn to verify that code does what it's supposed to do.
 
+> **Cross-reference:** This week introduces the functional verification techniques detailed in Chapter 20 (input partitioning, boundary analysis, category testing). Reference those sections when you need more depth.
+
 **The Problem You're Solving:** "It works" is not verification. Code that works for one input might fail for others. Functional verification systematically checks that code meets its specification across its intended domain.
 
 **Daily Practice (45-60 minutes):**
@@ -360,6 +362,8 @@ The most dangerous mistake is trusting test passage as proof of correctness. Tes
 ### Week 5: Semantic Verification
 
 **The Goal:** Learn to verify that code does what was *intended*, not just what was *specified*.
+
+> **Cross-reference:** This week builds on the semantic verification techniques in Chapter 20 (intent alignment, implicit expectations, context checking). Use those techniques as you practice.
 
 **The Problem You're Solving:** Specifications are imperfect. They describe what we think we want, but we often have implicit expectations we didn't specify. Semantic verification bridges the gap between specification and true intent.
 
@@ -542,6 +546,8 @@ The most revealing mistake is the phrase "No one would do that." You see a poten
 ### Week 7: Maintainability Verification
 
 **The Goal:** Learn to evaluate whether code can be understood and modified in the future.
+
+> **Cross-reference:** This week applies the maintainability verification techniques from Chapter 20 (naming review, complexity assessment, documentation quality). Practice with those specific checklists.
 
 **The Problem You're Solving:** Code is read more than it's written. AI generates code that works but is often hard to understand or modify. Maintainability verification ensures code won't become a burden.
 

@@ -77,7 +77,7 @@ Risk Score = (I × 3) + (R × 2) + (E × 2) + C
 - **Impact (3×)**: Most important—severity of what goes wrong
 - **Reversibility (2×)**: Affects recovery cost and learning opportunity
 - **Exposure (2×)**: Determines blast radius
-- **Compliance (1×)**: Already scaled 0-10 for appropriate weight
+- **Compliance (1×)**: No multiplier needed (scale is already 0-10 vs. 1-5 for other dimensions)
 
 **Range:** 0 (minimal risk) to 47 (maximum risk)
 
@@ -242,9 +242,9 @@ Risk Score = (I × 3) + (R × 2) + (E × 2) + C
 **Example:** Internal tool (E=2) with potential data loss (R=5)
 
 **Rule:** **Escalate to next trust level** when:
-- Any single dimension ≥ 4, regardless of total score
-- Compliance score ≥ 6
-- Impact = 5
+- Impact, Reversibility, or Exposure ≥ 4, regardless of total score
+- Compliance ≥ 6
+- Impact = 5 (always Minimal Trust)
 
 **Rationale:** A single high-risk dimension can cause catastrophic failure.
 
@@ -334,32 +334,46 @@ Risk Score = (I × 3) + (R × 2) + (E × 2) + C
 
 ## Customization Guidelines
 
-**This rubric is a starting point.** Adapt it to your context:
+> **⚠️ Advanced Topic:** The standard rubric (0-10, 11-20, 21-30, 31-47) is the recommended starting point for all teams. Only customize after using the standard rubric for at least 3 months and gathering data about your specific context.
 
-### Adjust Weights
-If compliance is critical for your domain (healthcare, finance):
+**This rubric is a starting point.** Adapt it to your context only if data shows systematic miscalibration:
+
+### Adjust Weights (Advanced)
+If compliance is critical for your domain (healthcare, finance) and you find compliance issues consistently underweighted:
 ```
 Risk Score = (I × 3) + (R × 2) + (E × 2) + (C × 1.5)
 ```
 
-### Adjust Thresholds
-If your team is new to VID, start conservative:
+**Caution:** Changing weights affects all scores. Recalibrate thresholds accordingly.
+
+### Adjust Thresholds (Advanced)
+**Do not adjust thresholds without data.** If your retrospectives show consistent miscalibration (e.g., "High Trust" items frequently cause incidents), consider:
+
+- **More conservative:** Shift thresholds down by 2 points across all levels
+- **Less conservative:** Shift thresholds up by 2 points across all levels
+
+**Example conservative adjustment:**
 ```
-0-8:   High Trust
-9-16:  Moderate Trust
-17-25: Guarded Trust
-26+:   Minimal Trust
+0-8:   High Trust      (instead of 0-10)
+9-18:  Moderate Trust  (instead of 11-20)
+19-28: Guarded Trust   (instead of 21-30)
+29+:   Minimal Trust   (instead of 31-47)
 ```
 
-### Add Dimensions
-Some teams add:
+**Never use different thresholds across team members.** Team-wide consistency is more important than individual calibration preferences.
+
+### Add Dimensions (Advanced)
+Some teams add context-specific dimensions:
 - **Complexity (Co):** How hard is this code to understand? (1-5)
 - **Novelty (N):** How unfamiliar is this domain/technology? (1-5)
 
+If adding dimensions, update the formula and recalibrate thresholds completely.
+
 ### Document Your Modifications
 If you customize:
-- Document why
-- Share with team
+- Document why (with retrospective data)
+- Get team-wide agreement
+- Share with new hires
 - Revisit quarterly
 - Keep the core concept: objective risk → appropriate verification
 
@@ -409,7 +423,7 @@ Print this for your desk:
 │ 21-30: Guarded Trust   (30-60 min)              │
 │ 31-47: Minimal Trust   (1-3 hr + review)        │
 │                                                 │
-│ ESCALATE if ANY dimension ≥ 4 or Compliance ≥ 6 │
+│ ESCALATE if I/R/E ≥ 4 OR Compliance ≥ 6        │
 │ WHEN UNSURE: Round up, ask team, verify more   │
 └─────────────────────────────────────────────────┘
 ```

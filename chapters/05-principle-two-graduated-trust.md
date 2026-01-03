@@ -63,7 +63,7 @@ Trust levels map to total scores:
 - **21-30:** Guarded Trust
 - **31-47:** Minimal Trust
 
-Escalate to the next level if any single dimension scores 4 or higher, or if Compliance is 6+ (regulated domains). The quick calculation keeps risk discussions objective in the moment while Appendix D provides the deeper rubric.
+Escalate to the next level if Impact, Reversibility, or Exposure scores 4 or higher, OR if Compliance is 6+ (regulated domains). The quick calculation keeps risk discussions objective in the moment while Appendix D provides the deeper rubric.
 
 ### Calibrating Trust
 
