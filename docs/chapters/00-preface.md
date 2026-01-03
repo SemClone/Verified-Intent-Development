@@ -20,6 +20,10 @@ This book is for software developers, engineering leaders, and teams who recogni
 - Maintain velocity without accumulating technical debt
 - Build verification skills that scale with AI capabilities
 
+## Acknowledgment on AI Assistance
+
+AI language models supported portions of the editorial review, fact validation, and automated build process for this edition. Every AI-assisted contribution went through human verification, alignment with VID principles, and provenance tracking before inclusion.
+
 ## How to Use This Book
 
 **If you're an individual developer:**
@@ -38,4 +42,3 @@ This isn't a prompt engineering guide, an AI tutorial, or a replacement for your
 The goal is judgment, not checklists. You'll learn principles that apply whether you're using today's AI tools or whatever emerges in five years.
 
 ---
-
